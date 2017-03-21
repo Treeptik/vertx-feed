@@ -1,0 +1,32 @@
+<div class="form-ribbon" flex-offset="15" flex="70"></div>
+<main class="form-main">
+    <div class="form-container">
+        <div class="form-content mdl-color--white mdl-shadow--4dp content">
+            <div class="form-crumbs">
+                <a ui-sref="home">Index</a> &gt; <a ui-sref="login">Login</a> &gt; Register
+            </div>
+            <h2>Register</h2>
+            <div layout="column">
+                <md-content layout-padding>
+                    <form name="registerForm" novalidate="" ng-submit="registerPage.register(registerPage.username, registerPage.password)">
+                        <div layout="row">
+                            <md-input-container flex="100">
+                                <label>Username</label>
+                                <input tytpe="text" required name="username" ng-model="registerPage.username">
+                            </md-input-container>
+                        </div>
+                        <div layout="row">
+                            <md-input-container flex="100">
+                                <label>Password</label>
+                                <input type="password" required name="password" ng-model="registerPage.password">
+                            </md-input-container>
+                        </div>
+                        <div layout="row" layout-align="center center">
+                            <button type="submit" md-button="md-button" class="md-raised md-primary md-cornered" value="Create account">Create account</button>
+                        </div>
+                    </form>
+                </md-content>
+            </div>
+        </div>
+    </div>
+</main>

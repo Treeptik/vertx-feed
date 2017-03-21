@@ -1,0 +1,40 @@
+<h3>Manage your subscriptions</h3>
+<div>
+    <p ng-if="!subscriptionPage.subscriptions.length">You have not subscribed at any feeds.</p>
+    <div layout="column">
+        <md-card class="subscription" ng-if="subscriptionPage.pendingSubscription">
+            <md-card-content>
+            <h2>Feed Form</h2>
+            <form name="addSubscriptionForm" ng-submit="subscriptionPage.savePending(subscriptionPage.pendingSubscription)" >
+                <div layout="row">
+                    <md-input-container flex="100">
+                        <label>URL</label>
+                        <input type="url" name="url" ng-model="subscriptionPage.pendingSubscription.url" placeholder="http://your.feed.here" required>
+                    </md-input-container>
+                </div>
+                <div layout="row">
+                    <div flex="100" md-color-picker ng-model="subscriptionPage.pendingSubscription.color" label="Choose a color" required></div>
+                </div>
+                <div layout="row" layout-align="center center">
+                    <button type="submit" md-button="md-button" class="md-raised md-primary md-cornered">Save</button>
+                    <button class="button-secondary" ng-click="subscriptionPage.cancelPending()" md-button="md-button">Cancel</button>
+                </div>
+            </form>
+            </md-card-content>
+        </md-card>
+        <md-card class="subscription" ng-repeat="subscription in subscriptionPage.subscriptions">
+            <md-card-content>
+                <div class="color_choice" style="background-color: {{subscription.color}};"></div>
+                <a href="{{subscription.url}}" target="_blank">
+                    <h2 ng-bind="subscription.url" class="title"></h2>
+                </a>
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-button class="md-raised md-primary md-cornered" ng-click="subscriptionPage.unsubscribe(subscription)">Unsubscribe</md-button>
+            </md-card-actions>
+        </md-card>
+        </div>
+        <button ng-click="subscriptionPage.addSubscription()" class="add_button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
+            <i class="material-icons">add</i>
+        </button>
+    </div>

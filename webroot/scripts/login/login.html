@@ -1,0 +1,16 @@
+<md-toolbar flex-offset="15" flex="70" class="md-hue-2" md-whiteframe="8">
+    <div class="md-toolbar-tools">
+        <h1><a ui-sref="home" >Vertx Feeds</a></h1>
+        <span flex></span>
+        <button ng-if="login.token" class="button-secondary" ng-click="login.logout()" md-button="md-button">
+            Log out
+        </button>
+        <a ng-if="!login.token" class="button-secondary " ui-sref="login" md-button="md-button">
+            Log in
+        </a>
+    </div>
+    <header class="">
+        <a ui-sref="feed"  class="mdl-layout__tab">Feeds</a>
+        <a ui-sref="subscription" class="mdl-layout__tab">Subscriptions</a>
+    </header>
+</md-toolbar>

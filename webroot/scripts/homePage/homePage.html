@@ -1,0 +1,46 @@
+<h3>Welcome to Vertx-Feeds !</h3>
+
+<p>Vertx-Feeds is a very simple feed aggregator created to demonstrate how to build a complete application with Vert.x 3, Apex, MongoDB and Redis.</p>
+<p>If you're interested (and you must be) by the source code, please have a look <a href="https://github.com/aesteve/vertx-feeds">at the GitHub repository</a></p>
+<!--{{#if userLogin}}
+<p>Hello {{userLogin}}. You can <a href="/private/manage.hbs">subscribe to RSS feeds</a>. You'll then be able to access your <a href="/private/news.hbs">news feed</a>. Remember it's a showcase project. <strong>Do not</strong> use it as an RSS Reader (or clone the project and create your own instance if you really want to !).</p>
+{{else}}
+<p>If you just want to play with the project to understand how it works, feel free to <a href="/register.hbs">register</a> with whatever login/password you want.</p>
+{{/if}}-->
+<p>The project is written in Java 8, but work is in progress to translate it into other languages supported by Vert.x</p>
+<p>List of technology used :</p>
+
+<md-list layout="row"  layout-align="center center">
+    <md-list-item class="md-2-line"  >
+        <div class="md-list-item-text">
+        <h3>Vert.x 3</h3>
+        <p>vertx-web</p>
+        </div>
+    </md-list-item>
+
+    <md-list-item class="md-2-line">
+        <div class="md-list-item-text">
+        <h3>MongoDB</h3>
+        <p>vertx-mongo-client</p>
+        </div>
+    </md-list-item>
+    <md-list-item class="md-2-line">
+        <div class="md-list-item-text">
+        <h3>Redis</h3>
+        <p>vertx-redis-client</p>
+        </div>
+    </md-list-item>
+    <md-list-item class="md-2-line">
+        <div class="md-list-item-text">
+        <h3>SockJS</h3>
+        <p>eventbus bridge</p>
+        </div>
+    </md-list-item>
+</md-list>
+
+<md-content>
+    <div layout="row" layout-align="center center">
+        <a class="md-raised md-primary md-cornered" href="https://github.com/aesteve/vertx-feeds/issues/new" md-button="md-button">Open an issue</a>
+        <a class="button-secondary " href="" md-button="md-button">Vert.x's Google Group</a>
+    </div>
+</md-content>
