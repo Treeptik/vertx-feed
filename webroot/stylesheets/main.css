@@ -37,8 +37,49 @@
   font-feature-settings: 'liga';
 }
 
+/* animation */
+@keyframes downEffect {
+    0% {
+        transform: translateY(-30%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes upEffect {
+    0% {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes opacityEffect {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes rightEffect {
+    0% {
+        transform: translateX(-20%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 0
+    }
+}
 /*form*/
 .form-ribbon {
+  animation: 0.7s ease-in 0s 1 downEffect;
   height: 30vh;
   background-color: #3F51B5;
 }
@@ -46,6 +87,7 @@
 .form-main {
   margin-top: -25vh;
   width: 100%;
+  animation: 0.7s ease-in 0s 1 upEffect;
 }
 
 .form-content {
@@ -57,11 +99,6 @@
 }
 a {
   text-decoration: none;
-}
-
-/* feed */
-.feed .title {
-    font-size: 0.8em;
 }
 
 /* manage */
@@ -76,6 +113,7 @@ a {
 }
 .subscription {
     margin: 10px 8%;
+    animation: 0.7s ease-in 0s 1 upEffect;
 }
 .subscription .color_choice {
     float: right;
@@ -107,9 +145,14 @@ a {
 .entry-pubdate {
 	text-align: right;
 }
+
+/* feed */
 .feed {
     margin: 10px 8%;
+    animation: 0.7s ease-in 0s 1 opacityEffect;
 }
+
 .feed .title {
-    font-size: 1.8em;
+    font-size: 1.2em;
+    margin: 0;
 }
