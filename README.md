@@ -1,3 +1,7 @@
+# RUN
+
+docker run  -p 8080:8080 -v $PWD/webroot:/usr/apps/webroot treeptik/node-httpserver
+
 ## Feed aggregator using Vert.x 3 and Vertx-web.
 
 This project is designed to show what a real-life application can look like with Vert.x.
